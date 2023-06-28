@@ -15,7 +15,7 @@
 
       mkdir -p $out/share/plymouth/themes/
       tar -xzvf $src -C $out/share/plymouth/themes/
-      substituteInPlace $out/share/plymouth/themes/vinyl/*.plymouth --replace '@IMAGES@' "$out/share/plymouth/themes/vinyl/images"
+      substituteInPlace $out/share/plymouth/themes/vinyl/*.plymouth --replace '@ROOT@' "$out/share/plymouth/themes/vinyl/"
 
       runHook postInstall
     '';
