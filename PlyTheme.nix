@@ -4,7 +4,7 @@
     version = "1.0";
     src = fetchurl {
     url = "https://raw.githubusercontent.com/Melechtna/Plymouth-Themes-NixOs-Conversion/vinyl/vinyl.tar.gz";
-    sha256 = "2df4ae288d5498ee6a9c343f34826d0f5ad8eebf1c1e3ac6f71a7ce454fb76ad";
+    sha256 = "50ca06c520bed5eb7b1913e1fdfe588671645bee754ac011de1688ea5776243a";
   };
 
     dontConfigure = true;
