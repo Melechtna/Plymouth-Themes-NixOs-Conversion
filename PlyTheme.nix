@@ -1,16 +1,15 @@
-{ stdenv, fetchFromGitHub }:
+{ stdenv, fetchurl }:
   stdenv.mkDerivation rec {
     pname = "plymouth-vinyl-theme";
     version = "1.0";
     dontBuild = true;
-        src = fetchFromGitHub {
-      owner = "Melechtna";
-      repo = "Plymouth-Themes-NixOs-Conversion";
-      rev = "v${version}";
-      sha256 = "8992f0a19c497e6dc17e6bdb22c7f3e260f342582071ff09f01c88aecdda4e56";
-    };
+    src = fetchurl {
+    url = "https://raw.githubusercontent.com/Melechtna/Plymouth-Themes-NixOs-Conversion/vinyl/vinyl.tar.gz";
+     sha256 = "abc90b1b26ae315df22e37b89ab04c1733df6c90bac1ca0bc612ab312636d6dc";
+  };
     installPhase = ''
-    mkdir -p $out/share/plymouth/themes/
-    mv * $out/share/plymouth/themes/
+    sed -i 's:\(^ImageDir=\)/usr:\1'"$out"':' vinyl.plymouth
+    mkdir -p $out/share/plymouth/themes/vinyl
+    mv * $out/share/plymouth/themes/vinyl
     '';
   }
