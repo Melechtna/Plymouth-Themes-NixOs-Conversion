@@ -4,7 +4,7 @@
     version = "1.0";
     src = fetchurl {
     url = "https://raw.githubusercontent.com/Melechtna/Plymouth-Themes-NixOs-Conversion/vinyl/vinyl.tar.gz";
-    sha256 = "865da99638fbadf1e91b318ac856f6809c3f7e2095b9718711b59b9f2786bb1e";
+    sha256 = "f4d82c21e7b7461c2011361b3d3ad89b0ae75bc70f152a262910c66ec8524278";
   };
 
     dontConfigure = true;
@@ -14,7 +14,7 @@
       runHook preInstall
 
       mkdir -p $out/share/plymouth/themes/
-      tar -xzvf $src -C $out/share/plymouth/themes/
+      tar -xvf $src -C $out/share/plymouth/themes/
       substituteInPlace $out/share/plymouth/themes/vinyl/*.plymouth --replace '@ROOT@' "$out/share/plymouth/themes/vinyl/"
 
       runHook postInstall
