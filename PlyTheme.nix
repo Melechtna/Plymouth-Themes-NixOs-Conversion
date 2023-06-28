@@ -2,7 +2,7 @@
 {
    PlyTheme = stdenv.mkDerivation rec {
     pname = "plymouth-vinyl-theme";
-    version = "1.0"
+    version = "1.0";
     dontBuild = true;
     installPhase = ''
     mkdir -p ${out}/share/plymouth/themes/
