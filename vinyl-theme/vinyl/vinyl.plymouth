@@ -1,0 +1,10 @@
+[Plymouth Theme]
+Name=Vinyl
+Description=My Little Pony bootsplash Vinyl Scratch DJ Pon3 version
+Comment=Created by Schiwi https://www.gnome-look.org/p/1000036/
+ModuleName=script
+
+
+[script]
+ImageDir=/run/current-system/sw/share/plymouth/themes/vinyl
+ScriptFile=/run/current-system/sw/share/plymouth/themes/vinyl/vinyl.script
